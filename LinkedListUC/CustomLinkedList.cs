@@ -48,5 +48,9 @@ namespace LinkedListUC
             }
             Console.WriteLine();
         }
+        public void Append(int data)
+        {
+            AddLast(data);
+        }
     }
 }
