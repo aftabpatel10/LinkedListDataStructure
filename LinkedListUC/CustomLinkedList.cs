@@ -99,5 +99,28 @@ namespace LinkedListUC
                 Console.WriteLine($"{deletedNode} is removed from Linkedlist");
             }
         }
+        //RemoveLast UC6
+        public void RemoveLast()        
+        {
+            Node temp = head;
+            if (head == null)
+                Console.WriteLine("LinkedList is emty");
+            else if (temp.next == null)
+            {
+                int data = temp.data;
+                head = null;
+                Console.WriteLine($"{data} is deleted");
+            }
+            else
+            {
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                int lastDeletedNode = temp.next.data;
+                temp.next = null;
+                Console.WriteLine($"{lastDeletedNode} node is deleted");
+            }
+        }
     }
 }
