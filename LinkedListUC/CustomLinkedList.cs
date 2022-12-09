@@ -87,5 +87,17 @@ namespace LinkedListUC
             if (!isFound)
                 Console.WriteLine($"{data} node is not present.");
         }
+        //RemoveFirst UC5 
+        public void RemoveFirst()      
+        {
+            if (head == null)
+                Console.WriteLine("LinkedList is emty");
+            else
+            {
+                int deletedNode = head.data;
+                head = head.next;
+                Console.WriteLine($"{deletedNode} is removed from Linkedlist");
+            }
+        }
     }
 }
