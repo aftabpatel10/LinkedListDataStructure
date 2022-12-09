@@ -23,7 +23,8 @@ namespace LinkedListUC
                 "6 : Deleting Last Element from the LL.\n" +
                 "7 : Searching any given Node.\n" +
                 "8 : Insert Element after given node.\n" +
-                "9: Delete any node from middle of LL.\n");
+                "9: Delete any node from middle of LL.\n" +
+                "10: Sort elements in Ascending Order in LinkedList\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -102,6 +103,15 @@ namespace LinkedListUC
                         customLinkedList8.DeleteFromMiddle(40);     
                         customLinkedList8.Display();
                         Console.WriteLine("Linked List Size is : " + customLinkedList8.Size());       
+                        break;
+                    //56 30 40 70 elements in ascending order .
+                    case 10:    
+                        SortedLinkedList<int> nodeAdd = new SortedLinkedList<int>();
+                        nodeAdd.Add(56);
+                        nodeAdd.Add(30);
+                        nodeAdd.Add(40);
+                        nodeAdd.Add(70);
+                        nodeAdd.DisplayLinkedList();
                         break;
                     default:
                         Console.WriteLine("Invalid option selected .Please try again !");
