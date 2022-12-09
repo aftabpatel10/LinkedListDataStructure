@@ -122,5 +122,28 @@ namespace LinkedListUC
                 Console.WriteLine($"{lastDeletedNode} node is deleted");
             }
         }
+        //Searching given Node UC7
+        public void SearchNode(int data)        
+        {
+            bool isFound = false;
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked List is empty");
+            else
+            {
+                while (temp != null)
+                {
+                    if (temp.data == data)
+                    {
+                        Console.WriteLine($"{temp.data} node is present");
+                        isFound = true;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
+            if (!isFound)
+                Console.WriteLine($"{data} node is not present.");
+        }
     }
 }

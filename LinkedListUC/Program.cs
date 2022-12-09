@@ -20,7 +20,8 @@ namespace LinkedListUC
                 "3 : AddFirst in LinkedList \n" +
                 "4 : Insertion between elements.\n" +
                 "5 : Deleting First Element from the LL.\n" +
-                "6 : Deleting Last Element from the LL.\n");
+                "6 : Deleting Last Element from the LL.\n" +
+                "7 : Searching any given Node.\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -68,8 +69,16 @@ namespace LinkedListUC
                         customLinkedList5.AddLast(30);
                         customLinkedList5.AddLast(70);
                         customLinkedList5.Display();
-                        customLinkedList5.RemoveLast();             //Deleteing Last Node UC6.
+                        customLinkedList5.RemoveLast();             
                         customLinkedList5.Display();
+                        break;
+                    //Searching any given Node .UC7
+                    case 7:
+                        CustomLinkedList customLinkedList6 = new CustomLinkedList();
+                        customLinkedList6.AddFirst(56);
+                        customLinkedList6.AddLast(30);
+                        customLinkedList6.AddLast(70);
+                        customLinkedList6.SearchNode(30);       
                         break;
                     default:
                         Console.WriteLine("Invalid option selected .Please try again !");
