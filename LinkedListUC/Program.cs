@@ -17,7 +17,8 @@ namespace LinkedListUC
                 Console.WriteLine("\nPlease choose as per the given options -\n" +
                 "1 : Adding elements by BuiltIn-LinkedList\n" +
                 "2 : Adding elements by using Custom LinkedList\\n\"" +
-                "3 : AddFirst in LinkedList \n");
+                "3 : AddFirst in LinkedList \n" +
+                "4 : Insertion between elements.\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -39,6 +40,14 @@ namespace LinkedListUC
                         customLinkedList2.Append(30);
                         customLinkedList2.Append(70);
                         customLinkedList2.Display();
+                        break;
+                    //InsertBetweenNodes() UC4.
+                    case 4: //add nodes 56 and 70 .insert 30 between 56 and 70 . sequence -> 56,30,70 .
+                        CustomLinkedList customLinkedList3 = new CustomLinkedList();
+                        customLinkedList3.AddFirst(56);
+                        customLinkedList3.AddLast(70);
+                        customLinkedList3.InsertBetweenNodes(56, 30, 70);   
+                        customLinkedList3.Display();
                         break;
                     default:
                         Console.WriteLine("Invalid option selected .Please try again !");
